@@ -45,7 +45,7 @@ protected:
 	/// <summary>
 	/// Pointer to the Static Mesh where the sphere must go.
 	/// </summary>
-	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Ball_Components")
+	UPROPERTY(BlueprintReadWrite, VisibleAnywhere, Category = "Ball_Components")
 		UStaticMeshComponent* smc_BallMeshComp;
 
 	/// <summary>
@@ -293,7 +293,7 @@ public:
 	bool* GetGameOverValue() { return &b_GameOver; };
 
 	/// <summary>
-	/// Function that controls Game Over behavior.
+	/// Function that is called when a Game Over condition is triggered; handles all subsequent behaviors and code execution.
 	/// </summary>
 	/// <param name="b_WasHazard">If Pawn made contact with a Hazard, then set this as True. It's False by default.</param>
 	void OnGameOver(const bool& b_WasHazard = false);

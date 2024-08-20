@@ -149,7 +149,6 @@ void UC_BallGameHUD::OpenSettings()
 	}
 
 	SetEnumCurrentMenu(SETTINGS);
-	// SetCursorOnSpecificWidget(0);
 	SetSettingsCanvasVisibility(ESlateVisibility::Visible);
 	SetMainMenuVisibility(ESlateVisibility::Collapsed);
 
@@ -205,14 +204,12 @@ void UC_BallGameHUD::OpenConfirmResetScreen()
 {
 	SetConfirmResetCanvasVisibility(ESlateVisibility::Visible);
 	SetEnumCurrentMenu(RESET_RECORDS);
-	// SetCursorOnSpecificWidget(0);
 }
 
 void UC_BallGameHUD::CloseConfirmResetScreen()
 {
 	SetConfirmResetCanvasVisibility(ESlateVisibility::Collapsed);
 	SetEnumCurrentMenu(SETTINGS);
-	// SetCursorOnNextWidget(0);
 }
 
 void UC_BallGameHUD::RestoreAllRecordsThenSave()

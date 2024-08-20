@@ -29,6 +29,9 @@ class C_MINIGAMESPORTFOLIO_API UC_BallGameHUD : public UUserWidget
 
 public:
 
+	/// <summary>
+	/// Placement of where the player is inside the menus.
+	/// </summary>
 	enum EBallGameMenu : uint8
 	{
 		MAIN_MENU = 1,
@@ -39,6 +42,9 @@ public:
 		NONE = 0
 	};
 
+	/// <summary>
+	/// Enumerator to check where the player is inside the menus. Used to confirm behaviours such as opening other menus or disable specific buttons.
+	/// </summary>
 	EBallGameMenu enum_CurrentMenu;
 
 	/// <summary>
@@ -97,7 +103,7 @@ public:
 	/// <summary>
 	/// UFUNCTION that is called by the BeginGame button when On Clicked.
 	/// Sets the game to change into GameOnly Mode, and calls the MiniGameMode to stream load the level.
-	/// Also closes any motion running in the Main Menu, like the how to play vídeo.
+	/// Also closes any motion running in the Main Menu, like the How to Play vídeo.
 	/// </summary>
 	UFUNCTION()
 	void OpenStreamLevel();
@@ -171,7 +177,7 @@ public:
 	/// <summary>
 	/// When the dial of the Mouse Slider changes its value, it updates its current value in the the Mini Game Mode, C_GameInstance and Character.
 	/// </summary>
-	/// <param name="f_Value"></param>
+	/// <param name="f_Value">Value to set the sensitivity of the camera's rotation.</param>
 	UFUNCTION()
 	void MouseValueChange(float f_Value);
 

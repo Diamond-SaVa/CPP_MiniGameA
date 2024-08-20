@@ -6,7 +6,7 @@ public class C_MiniGamesPortfolio : ModuleRules
 {
 	public C_MiniGamesPortfolio(ReadOnlyTargetRules Target) : base(Target)
 	{
-		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
+        PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
 		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "EnhancedInput", "Niagara", "EditorScriptingUtilities", "UMG", "MediaAssets" });
 
